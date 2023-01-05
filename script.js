@@ -28,13 +28,14 @@ function generatePassword(length, upper, lower, number, symbol) {
     let generatedPassword = '';
     const typesCount = upper + lower +  number + symbol;
     const typesArr = [{upper}, {lower}, {number}, {symbol}]
-        .filter(item => Object.values(item)[0]);
+    .filter(item => Object.values(item)[0]);
 
     if(typesCount === 0) {
         return '';
     }
 
     for(let i = 0; i < length; i += typesCount){
+        console.log(i);
         typesArr.forEach(type => {
             const funcName = Object.keys(type)[0];
             generatedPassword += randomFunc[funcName]();
