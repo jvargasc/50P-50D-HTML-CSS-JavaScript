@@ -1,4 +1,6 @@
 <p>pokemons works!</p>
-<app-pokemon>
 
-</app-pokemon>
+  <app-pokemon *ngFor="let pokemonItem of pokemonList"
+  [pokemonResponseItem]="getPokemonData(pokemonItem)"
+  ></app-pokemon>
+<!-- <div></div> -->
