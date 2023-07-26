@@ -43,42 +43,4 @@ export class PokemonsComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
-//  : Observable<Pokemon>
-  getPokemonData(pokemonResponseItem: PokemonResponseItem)  {
-
-    let specialCharLastPosition: number;
-    let id: string = pokemonResponseItem.url;
-
-    id = id.substring(0, id.length -1 );
-
-    specialCharLastPosition = id.lastIndexOf('/');
-    id = id.substring(specialCharLastPosition + 1);
-
-    this.getPokemonInfo(id);
-
-    let pokemon = new Pokemon(+id, pokemonResponseItem.name, '', '' ) ;
-
-    // console.log(id);
-    // console.log(id.lastIndexOf('/'));
-    // console.log(id);
-    // console.log(pokemon);
-
-    return pokemonResponseItem;
-  }
-
-  getPokemonInfo(id: string ) {
-    //this.pokemonService.getPokemon(id).subscribe();
-
-    console.log('getPokemonInfo()');
-
-    this.pokemonService.getPokemon(id).subscribe(
-        response => {
-          // this.pokemonList = PokemonResponseItem.results;
-          console.log(response);
-        },
-      error => this.errorMessage = <any>error
-    );
-
-  }
-
 }
