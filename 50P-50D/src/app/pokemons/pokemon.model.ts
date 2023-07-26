@@ -1,14 +1,16 @@
 export class Pokemon {
 
-  public id: number;
-  public name: string;
-  public type: string;
-  public img: string;
+  public id: number = 0;
+  public name: string = '';
+  public type: string = '';
+  public color: string = '';
+  public img: string = '';
 
-   constructor(id: number, name: string, type: string, img: string) {
+   constructor(id: number, name: string, type: string, color: string, img: string) {
     this.id = id;
     this.name = name;
     this.type = type;
+    this.color = color;
     this.img = img;
   }
 

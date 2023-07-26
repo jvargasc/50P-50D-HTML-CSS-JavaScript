@@ -1,16 +1,16 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { PokemonService } from './pokemon.service';
-import { Pokemon, PokemonResponseItem } from './pokemon.model';
+import { PokemonService } from '../pokemon.service';
+import { Pokemon, PokemonResponseItem } from '../pokemon.model';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-pokemons',
-  templateUrl: './pokemons.component.html',
-  styleUrls: ['./pokemons.component.css'],
+  selector: 'app-pokemon-list',
+  templateUrl: './pokemon-list.component.html',
+  styleUrls: ['./pokemon-list.component.css'],
   providers: [PokemonService]
 })
 
-export class PokemonsComponent implements OnInit, OnDestroy {
+export class PokemonsListComponent implements OnInit, OnDestroy {
 
   pokemons: Pokemon[] = [];
   pokemonList: PokemonResponseItem[] = [];
