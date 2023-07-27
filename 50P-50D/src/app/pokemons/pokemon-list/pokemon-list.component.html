@@ -2,10 +2,8 @@
   <div class="poke-container" id="poke-container">
 
     <app-pokemon-detail
-      *ngFor="let pokemonItem of pokemonList"
+      *ngFor="let pokemonItem of getPokemonList()"
       [pokemon]="pokemonItem">
     </app-pokemon-detail>
 
   </div>
-
-

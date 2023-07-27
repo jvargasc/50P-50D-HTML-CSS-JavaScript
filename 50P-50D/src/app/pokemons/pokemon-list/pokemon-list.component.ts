@@ -13,8 +13,7 @@ import { Subscription } from 'rxjs';
 export class PokemonsListComponent implements OnInit, OnDestroy {
 
   pokemonList: Pokemon[] = [];
-  subscription: Subscription = new Subscription;
-  pokemon_count = 15;
+  pokemon_count = 150;
   colors =  [
   {
     tipo: 'fire', color: '#FDDFDF'
@@ -70,7 +69,7 @@ export class PokemonsListComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy()  {
-    this.subscription.unsubscribe();
+
   }
 
   fetchPokemons() {
@@ -98,6 +97,10 @@ export class PokemonsListComponent implements OnInit, OnDestroy {
       error => this.errorMessage = <any>error
     );
 
+  }
+
+  getPokemonList() {
+    return this.pokemonList.sort((a, b) => a.id - b.id)
   }
 
 }
