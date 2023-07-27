@@ -7,3 +7,21 @@
     </app-pokemon-detail>
 
   </div>
+
+<!-- This is another way to render the pokemon-detail component
+  <div *ngFor="let pokemon of pokemonList">
+    <div class="pokemon" [ngStyle]="{backgroundColor: [pokemon.color]}">
+       <div class="pokemon">
+        <div class="img-container">
+          <img src="{{ pokemon.img == '' ? '' : pokemon.img  }}" alt="">
+        </div>
+        <div class="info">
+          <span class="number">#{{ pokemon.id | number:'3.0' }}</span>
+          <h3 class="name">{{ pokemon.name | titlecase}}</h3>
+          <small class="type">Type: <span>{{pokemon.type | titlecase}}</span></small>
+        </div>
+      </div>
+     </div>
+  </div>
+</div>
+ -->
