@@ -1,7 +1,9 @@
 
   <div class="poke-container" id="poke-container">
 
-    <app-pokemon-detail *ngFor="let pokemonItem of pokemonList" [pokemonResponseItem]="pokemonItem">
+    <app-pokemon-detail
+      *ngFor="let pokemonItem of pokemonList"
+      [pokemon]="pokemonItem">
     </app-pokemon-detail>
 
   </div>

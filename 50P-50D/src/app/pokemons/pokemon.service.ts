@@ -28,9 +28,9 @@ export class PokemonService {
 
   //: Observable<PokemonResponse>
 
-  getPokemon(url: string) : Observable<any>{
+  getPokemon(id: string) : Observable<any>{
 
-    return this.http.get<any>(url);
+    return this.http.get<any>(this.pokemonUrl + id);
 
   }
 
